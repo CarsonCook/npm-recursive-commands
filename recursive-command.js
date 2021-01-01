@@ -3,7 +3,6 @@
 const path = require('path');
 const shell = require('shelljs');
 const argv = require('yargs').argv;
-const clc = require('cli-color');
 
 function packageJsonLocations(dirname) {
     return shell.find(dirname)
@@ -12,10 +11,11 @@ function packageJsonLocations(dirname) {
 }
 
 function npm(directoryName) {
-    let result = shell.exec(`npm ${argv['_'].join(' ')}`);
+    const command = `npm ${argv['_'].join(' ')}`;
+    let result = shell.exec(command);
     shell.cd(directoryName);
 
-    console.log(clc.blueBright('Current npm path: ' + directoryName + '/package.json...'));
+    console.log(`Running '${command}' in '${directoryName}'`);
 
     return {
         directoryName: directoryName,
@@ -35,10 +35,5 @@ if (require.main === module) {
         .map(npm)
         .reduce((code, result) =>result.exitCode > code ? result.exitCode : code, 0);
 
-    console.log(clc.green.bold('End of npms'));
     process.exit(exitCode);
 }
-
-module.exports = {
-    npm: npm
-};
