@@ -12,15 +12,7 @@ function packageJsonLocations(dirname) {
 }
 
 function npm(directoryName) {
-    let command = 'npm';
-
-    if (argv.cmd)
-        command += ' ' + argv.cmd;
-
-    if (argv.opt)
-        command += ' ' + argv.opt;
-
-    let result = shell.exec(command);
+    let result = shell.exec(`npm ${argv['_'].join(' ')}`);
     shell.cd(directoryName);
 
     console.log(clc.blueBright('Current npm path: ' + directoryName + '/package.json...'));
