@@ -17,5 +17,11 @@
     "type": "git",
     "url": "https://github.com/CarsonCook/npm-recursive-commands"
   },
-  "homepage": "https://github.com/CarsonCook/npm-recursive-commands#readme"
+  "homepage": "https://github.com/CarsonCook/npm-recursive-commands#readme",
+  "dependencies": {
+    "cli-color": "^2.0.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.4",
+    "yargs": "^16.2.0"
+  }
 }
