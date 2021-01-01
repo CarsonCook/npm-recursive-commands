@@ -12,10 +12,10 @@ function packageJsonLocations(dirname) {
 
 function npm(directoryName) {
     const command = `npm ${argv['_'].join(' ')}`;
-    let result = shell.exec(command);
-    shell.cd(directoryName);
-
     console.log(`Running '${command}' in '${directoryName}'`);
+
+    shell.cd(directoryName);
+    let result = shell.exec(command);
 
     return {
         directoryName: directoryName,
