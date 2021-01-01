@@ -1,0 +1,21 @@
+{
+  "name": "npm-recursive-commands",
+  "description": "Run npm commands in the working directory and all sub-directories that have a package.json file, excluding node_modules",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "recursive-command.js",
+  "bin": {
+    "npm-recursive": "recursive-command.js"
+  },
+  "keywords": [
+    "npm",
+    "recursive",
+    "install",
+    "command"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarsonCook/npm-recursive-commands"
+  },
+  "homepage": "https://github.com/CarsonCook/npm-recursive-commands#readme"
+}
