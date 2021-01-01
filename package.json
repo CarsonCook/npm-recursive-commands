@@ -1,7 +1,7 @@
 {
   "name": "npm-recursive-commands",
   "description": "Run npm commands in the working directory and all sub-directories that have a package.json file, excluding node_modules",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "recursive-command.js",
   "bin": {
